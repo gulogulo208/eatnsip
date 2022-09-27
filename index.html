@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./Assets/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>eatNip</title>
+</head>
+<body>
+  <div class="container">
+  <h1>eatNip</h1>
+  <p>Running out of ideas for food and drinks you have left in your house?</p>
+  <p>Don't you worry</p>
+
+  <div class="food-drink-search-box">
+    <input type="text" class="search-food-drinks"
+    placeholder="enter your ingredients" id="search-input">
+    <button type="submit" class ="search-btn btn" id="search-btn">
+    <i class = "fas fa-search"></i>
+    </button>
+  </div>
+  </div>
+
+  <div class="food-drink-result">
+    <h2 class="title">Here is your search result</h2>
+    <div id="food">
+      <!-- Below is the list of food -->
+      <div class="food-item">
+        <div class="food-img">
+          <img src="./images/Apples bunch.jpeg" alt="leftovers-food">
+        </div>
+        <div class="food-name">
+          <h3>Apple</h3>
+          <a href="#" class="recipe-btn">Click for Recipe</a>
+        </div>
+      </div>
+      <div class="food-item">
+        <div class="food-img">
+          <img src="./images/Apples bunch.jpeg" alt="leftovers-food">
+        </div>
+        <div class="food-name">
+          <h3>Apple</h3>
+          <a href="#" class="recipe-btn">Click for Recipe</a>
+        </div>
+      </div>
+      <div class="food-item">
+        <div class="food-img">
+          <img src="./images/Apples bunch.jpeg" alt="leftovers-food">
+        </div>
+        <div class="food-name">
+          <h3>Apple</h3>
+          <a href="#" class="recipe-btn">Click for Recipe</a>
+        </div>
+      </div>
+      <!-- ends the meal item list -->
+      </div>
+    </div>
+  
+  <div class="food-descriptions">
+    <!-- recipe btn closes here -->
+    <button type="button" class="btn-recipe-close-btn"
+    id="recipe-close-btn">
+    <i class="fas fa-times"></i>
+    </button>
+
+    <div class="food-details-content">
+      <h2 class="recipe-title">Apple</h2>
+      <p class="recipe-category">Cocktails</p>
+      <div class="recipe-guide"></div>
+      <h3>Guide on recipe</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque nihil odit nisi quibusdam veritatis sint explicabo laudantium quae sapiente minus natus ratione consequuntur enim 
+        accusantium, at beatae aliquid! Nemo, ipsum!</p>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur doloribus delectus laudantium, quisquam recusandae dolores dolor, architecto nesciunt eligendi error animi 
+        quo debitis blanditiis beatae vitae ut, quod culpa? Eligendi.</p>
+    <div class="recipe-food-img">
+      <img src="./images/Apples bunch.jpeg" alt="">
+    <div class="recipe-link">
+    </div>
+    </div>
+    </div>
+
+  </div>
+</div>
+
+<script src="./Assets/app.js"></script>
+</body>
+</html>
