@@ -43,6 +43,8 @@ body{
 }
 
 .ingredient-search-box{
+
+.food-drink-search-box{
   margin: 1.2rem 0;
   display: flex;
   align-items: stretch;
@@ -74,6 +76,18 @@ body{
   border-bottom-right-radius: 2rem;
   transition: all 0.4s linear;
 }
+  
+.search-btn{
+  width: 55px;
+  height: 55px;
+  font-size: 1.8rem;
+  background: lightskyblue;
+  color:#fff;
+  border: none;
+  border-top-right-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+  transition: all 0.4s linear;
+}
 
 .search-btn:hover{
   background: blue;
@@ -83,7 +97,9 @@ body{
   margin-top: 4rem;
 }
 
-#recipe{margin: 2.4rem 0;
+#recipe{
+margin: 2.4rem 0;
+
 }
 
 .food-item{
@@ -92,6 +108,7 @@ body{
   box-shadow: 0 4px 21px -12px rgba(0, 0, 0, 0.79);
   margin: 2rem 0;
 }
+
 .recipe-btn,
 .drink-btn{
   text-decoration: none;
