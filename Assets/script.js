@@ -135,9 +135,6 @@ function drinkRecipeModal(drink){
         <div class = "recipe-meal-img">
             <img src = "${drink.strDrinkThumb}" alt = "">
         </div>
-        <div class = "recipe-link">
-            <a href = "${drink.strYoutube}" target = "_blank">Watch Video</a>
-        </div>
         <button type ="button" class ="btn-cancel" onclick ="closeForm()"> Close </button>
     `;
     recipeDetailsContent.innerHTML = html;

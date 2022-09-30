@@ -82,7 +82,7 @@ body{
 }
   
 .search-btn{
-  width: 150px;
+  width: 200px;
   height: 35px;
   font-size: 1rem;
   background: lightskyblue;
@@ -121,7 +121,7 @@ margin: 2.4rem 0;
   font-weight: 500;
   font-size: 1.1rem;
   padding: 0.75rem 0;
-  width: 175px;
+  width: 200px;
   margin: 1 rem auto;
   border-radius: 2rem;
   transition: all 00.4s;
@@ -134,19 +134,28 @@ margin: 2.4rem 0;
 {
   color: #fff;
   background: lightskyblue;
+  border: none;
   font-weight: 500;
   font-size: 1.1rem;
-  width: 100px;
+  width: 150px;
   margin: auto;
   border-radius: 1rem;
   transition: all 00.4s;
   text-align: center;
+  cursor: pointer;
+}
+
+.drink-recipe-btn:hover,
+.food-recipe-btn:hover
+{
+  background:darkblue;
 }
 
 .btn-cancel
 {
   color: #fff;
   background: rgb(188, 103, 103);
+  border:none;
   font-weight: 500;
   font-size: 1.1rem;
   width: 100px;
@@ -154,6 +163,7 @@ margin: 2.4rem 0;
   border-radius: 1rem;
   transition: all 00.4s;
   text-align: center;
+  cursor:pointer;
 }
 
 .recipe-btn:hover{
@@ -212,6 +222,10 @@ margin: 2.4rem 0;
   background-color: white;
 }
 
+img{
+  border-radius: 16px;
+}
+
 .recipe-details-content::-webkit-scrollbar-thumb{
   background: #f0f0f0;
   border-radius: 2rem;
@@ -224,8 +238,6 @@ margin: 2.4rem 0;
 .recipe-details-content p{
   margin: 1 rem 0;
 }
-
-
 
 .recipe-category {
   background: #fff;
