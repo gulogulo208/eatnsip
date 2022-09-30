@@ -6,10 +6,6 @@
   box-sizing: border-box;
 }
 
-:root {
-  color: orange;
-}
-
 body{
   font-weight: 300;
   font-size: 1.05rem;
@@ -30,8 +26,13 @@ body{
   margin-bottom: 1rem; 
 }
 
-.container{
-  min-height: 100vh;
+/* Jumbotron code from bootstrap */
+.jumbotron{
+  color:orange;
+  padding:2rem 1rem;
+  margin-bottom:2rem;
+  background-color:#fff;
+  border-radius:.3rem
 }
 
 .food-drink-result{
@@ -43,11 +44,11 @@ body{
 }
 
 .ingredient-search-box{  margin: 1.2rem 0;
-  display: flex;
   align-items: stretch;
 }
 
 .search-food-drinks {
+  padding-left: 10px;
   margin: 1.2rem 0;
   display: flex;
   align-items: stretch;
@@ -66,6 +67,7 @@ body{
   color: lightskyblue;
   border-radius: 1rem;
 }
+
 
 .food-btn{
   width: 55px;
@@ -112,13 +114,13 @@ margin: 2.4rem 0;
 
 .recipe-btn,
 .drink-btn{
+  display:block;
   text-decoration: none;
   color: #fff;
   background: lightskyblue;
   font-weight: 500;
   font-size: 1.1rem;
   padding: 0.75rem 0;
-  display: block;
   width: 175px;
   margin: 1 rem auto;
   border-radius: 2rem;
@@ -126,6 +128,34 @@ margin: 2.4rem 0;
   text-align: center;
 
 }
+
+.drink-recipe-btn,
+.food-recipe-btn
+{
+  color: #fff;
+  background: lightskyblue;
+  font-weight: 500;
+  font-size: 1.1rem;
+  width: 100px;
+  margin: auto;
+  border-radius: 1rem;
+  transition: all 00.4s;
+  text-align: center;
+}
+
+.btn-cancel
+{
+  color: #fff;
+  background: rgb(188, 103, 103);
+  font-weight: 500;
+  font-size: 1.1rem;
+  width: 100px;
+  margin: auto;
+  border-radius: 1rem;
+  transition: all 00.4s;
+  text-align: center;
+}
+
 .recipe-btn:hover{
   background:darkblue;
 }
@@ -143,12 +173,12 @@ margin: 2.4rem 0;
   font-size: 1.4rem;
 }
 
-.food-descriptions{
+.item-descriptions{
   text-align: center;
 }
 
 .food-descriptions{
-  position:fixed;
+  position:relative;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -158,39 +188,44 @@ margin: 2.4rem 0;
   width: 90%;
   height: 90%;
   overflow-y: scroll;
-  /* display: none; */
   padding: 2rem 0;
   
 }
 
-.food-details-content::-webkit-scrollbar-thumb{
+/* The popup form - hidden by default */
+.form-popup {
+  display: none;
+  position: fixed;
+  max-height:100vh;
+  bottom: 0;
+  overflow:auto;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+  background-color: #fff;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 200px;
+  margin:auto;
+  background-color: white;
+}
+
+.recipe-details-content::-webkit-scrollbar-thumb{
   background: #f0f0f0;
   border-radius: 2rem;
 }
 
-.food-details-content{
+.recipe-details-content{
   display: 2rem;
 }
 
-.food-details-content p{
+.recipe-details-content p{
   margin: 1 rem 0;
 }
 
-.btn-recipe-close-btn{
-  position: absolute;
-  right: 2rem;
-  top: 2rem;
-  font-size: 1.8rem;
-  background: #fff;
-  border: none;
-  width: 35px;
-  height: 35px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0.8;
-}
+
 
 .recipe-category {
   background: #fff;

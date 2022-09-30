@@ -29,7 +29,8 @@ function foodrecipeList(){
                         </div>
                         <div class = "food-name">
                             <h3>${meal.strMeal}</h3>
-                            <a href = "#" class = "food-recipe-btn">Get Recipe</a>
+                            <button class ="food-recipe-btn" onclick ="getRecipe"> Get Recipe </button>
+                            
                         </div>
                     </div>
                 `;
@@ -42,6 +43,7 @@ function foodrecipeList(){
 
         recipeList.innerHTML = html;
     });
+    
 }
 
 // Drink Java Section
@@ -61,7 +63,8 @@ function drinkrecipeList(){
                         </div>
                         <div class = "food-name">
                             <h3>${drink.strDrink}</h3>
-                            <a href = "#" class = "drink-recipe-btn">Get Recipe</a>
+                            <button class ="drink-recipe-btn" onclick ="getRecipe"> Get Recipe </button>
+                            
                         </div>
                     </div>
                 `;
@@ -97,6 +100,7 @@ function foodRecipeModal(meal){
     console.log(meal);
     meal = meal[0];
     let html = `
+    <div class="form-popup" id="myForm">
         <h2 class = "recipe-title">${meal.strMeal}</h2>
         <p class = "recipe-category">${meal.strCategory}</p>
         <div class = "recipe-instruct">
@@ -109,9 +113,11 @@ function foodRecipeModal(meal){
         <div class = "recipe-link">
             <a href = "${meal.strYoutube}" target = "_blank">Watch Video</a>
         </div>
+        <button type ="button" class ="btn-cancel" onclick ="closeForm()"> Close </button>
     `;
     recipeDetailsContent.innerHTML = html;
     recipeDetailsContent.parentElement.classList.add('showRecipe');
+    document.getElementById("myForm").style.display ="block";
 }
 
 
@@ -119,6 +125,7 @@ function foodRecipeModal(meal){
 function drinkRecipeModal(drink){
     drink = drink[0];
     let html = `
+        <div class="form-popup" id="myForm">
         <h2 class = "recipe-title">${drink.strDrink}</h2>
         <p class = "recipe-category">${drink.strDrink}</p>
         <div class = "recipe-instruct">
@@ -131,7 +138,14 @@ function drinkRecipeModal(drink){
         <div class = "recipe-link">
             <a href = "${drink.strYoutube}" target = "_blank">Watch Video</a>
         </div>
+        <button type ="button" class ="btn-cancel" onclick ="closeForm()"> Close </button>
     `;
     recipeDetailsContent.innerHTML = html;
     recipeDetailsContent.parentElement.classList.add('showRecipe');
+    document.getElementById("myForm").style.display ="block";
+}
+
+function closeForm()
+{
+    document.getElementById("myForm").style.display ="none";
 }
