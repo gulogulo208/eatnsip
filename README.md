@@ -21,5 +21,4 @@ Applying what we learned in our class in this project was the most important thi
 
 # Screen-shot
 <!-- insert image folder name in (/relative/path/images/img.png)  -->
-![alt text](/relative/path/images/img.png)
-![alt text](/relative/path/images/img.png)
+![app image](/Assets/app_img.png)
