@@ -1,19 +1,20 @@
-const FoodsrchBtn = document.getElementById('food-btn');
-const DrinksrchBtn = document.getElementById('drink-btn');
+const foodSrchBtn = document.getElementById('food-btn');
+const drinkSrchBtn = document.getElementById('drink-btn');
 const recipeList = document.getElementById('recipe');
 const recipeDetailsContent = document.querySelector('.recipe-details-content');
 const recipeCloseBtn = document.getElementById('recipe-close-btn');
+var searchInputTxt = document.getElementById('search-input').value.trim();
 
 // event listeners
-FoodsrchBtn.addEventListener('click', foodrecipeList);
-DrinksrchBtn.addEventListener('click', drinkrecipeList);
+foodSrchBtn.addEventListener('click', foodrecipeList);
+drinkSrchBtn.addEventListener('click', drinkrecipeList);
 recipeList.addEventListener('click', getRecipe);
-recipeCloseBtn.addEventListener('click', () => {
-    recipeDetailsContent.parentElement.classList.remove('showRecipe');
-});
+// recipeCloseBtn.addEventListener('click', () => {
+//     recipeDetailsContent.parentElement.classList.remove('showRecipe');
+// });
 
 
-// get meal list that matches with the ingredients
+// Food Results Section
 function foodrecipeList(){
     let searchInputTxt = document.getElementById('search-input').value.trim();
     fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?i=${searchInputTxt}`)
@@ -44,9 +45,11 @@ function foodrecipeList(){
         recipeList.innerHTML = html;
     });
     
+    localStorage.setItem('input', searchInputTxt) // added by Theodore 2022-10-03
+    localStorage.getItem(searchInputTxt);
 }
 
-// Drink Java Section
+// Drink Results Section
 
 function drinkrecipeList(){
     let searchInputTxt = document.getElementById('search-input').value.trim();
@@ -77,7 +80,23 @@ function drinkrecipeList(){
 
         recipeList.innerHTML = html;
     });
+
+    localStorage.setItem('input', searchInputTxt); // This line was added by Theodore 2022-10-03
+    localStorage.getItem(searchInputTxt);
 }
+
+
+
+
+// localStorage.setItem('search-input', document.getElementById('search-input').value);
+// localStorage.getItem(document.getElementById('search-input').value);
+// console.log(document.getElementById('search-input').value);
+
+
+
+
+
+
 
 // get recipe of the meal
 function getRecipe(e){
@@ -97,7 +116,6 @@ function getRecipe(e){
 
 // create a modal
 function foodRecipeModal(meal){
-    console.log(meal);
     meal = meal[0];
     let html = `
     <div class="form-popup" id="myForm">
@@ -134,9 +152,6 @@ function drinkRecipeModal(drink){
         </div>
         <div class = "recipe-meal-img">
             <img src = "${drink.strDrinkThumb}" alt = "">
-        </div>
-        <div class = "recipe-link">
-            <a href = "${drink.strYoutube}" target = "_blank">Watch Video</a>
         </div>
         <button type ="button" class ="btn-cancel" onclick ="closeForm()"> Close </button>
     `;
